@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CloseDateCheck</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISPICKVAL(Status__c, &quot;終了（募集済み）&quot;),ISPICKVAL(Status__c, &quot;終了（拒否）&quot;) ), ISBLANK(Close_Date__c))</errorConditionFormula>
+    <errorMessage>終了年月日を入力してください</errorMessage>
+</ValidationRule>
